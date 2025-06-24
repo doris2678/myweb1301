@@ -89,15 +89,15 @@
                     </tbody>
                 </table>
                 <?php
-                                $do=$_GET['do'] ??'title';
-                                $file="./backend/".$do.".php";  
-                                if(file_exists($file)){
-                                    include $file;
-                                }else{
-                                  include './backend/title.php';   
-                                }
-                                 ?>
-
+								$do=$_GET['do']??'title';
+								$file="./backend/".$do.".php";
+								if(file_exists($file)){
+									include $file; 
+								}else{
+									
+									include './backend/title.php'; 
+								}
+									?>
 
             </div>
             <div id="alt"
