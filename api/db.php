@@ -14,7 +14,7 @@
       return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
    }
 
-function to($url) {
+function to($url) {  
   header("location:".$url);
 }  
 
@@ -69,18 +69,19 @@ function save($array){
     //update
     $sql="update $this->table set ";
     $tmp=$this->arraytosql($array);
-    $sql.= join(" , ",$tmp) . " where `id`={$array['id']};'";
+    $sql.= join(" , ",$tmp) . " where `id`='{$array['id']}';";
   }else{
     //insert
     $cols=join("`,`",array_keys($array));
     $values=join("','",$array);
     $sql="insert into $this->table (`$cols`) values('$values')";    
   }
+  // echo $sql;  
   return $this->pdo->exec($sql);
 }
 
 function del($id){
-     $sql="delete * from $this->table  ";
+     $sql="delete from $this->table  ";
   
     if(is_array($id)){
        $tmp=$this->arraytosql($id);
@@ -88,7 +89,7 @@ function del($id){
     }else {
        $sql .= " where `id`='$id'";
     }
-      //echo $sql;
+      // echo $sql;
       return $this->pdo->exec($sql); 
 }
 
@@ -103,6 +104,7 @@ private function arraytosql($array){
 
 }
  
-
+$Title=new DB('title');
+$Ad=new DB('ad');
 
 ?>
