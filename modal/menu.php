@@ -1,17 +1,13 @@
-<h3 style='text-align:center;'>新增管理者帳號</h3>
+<h3 style='text-align:center;'>新增主選單</h3>
 <hr>
 <form action="./api/insert.php" method='post' enctype="multipart/form-data">
     <div>
-        <label>帳號：</label>
-        <input type="text" name="acc">
+        <label>主選單名稱：</label>
+        <input type="text" name="text">
     </div>
     <div>
-        <label>密碼：</label>
-        <input type="password" name="pw">
-    </div>
-    <div>
-        <label>確認密碼：</label>
-        <input type="password">
+        <label>選單連結網址：</label>
+        <input type="text" name="href">
     </div>
     <div>
         <input type="hidden" name="table" value="<?=$_GET['table'];?>">
