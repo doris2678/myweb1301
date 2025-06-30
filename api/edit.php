@@ -24,6 +24,9 @@ foreach($_POST['id'] as $key => $id){
                 $row['href']=$_POST['href'][$key];
                 $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
             break;
+            // case "total":                
+            //     $row['total']=$_POST['total'];                       
+            // break;
             default:
                 if(isset($row['text'])){
                     $row['text']=$_POST['text'][$key];
