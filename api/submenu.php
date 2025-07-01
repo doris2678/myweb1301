@@ -2,18 +2,18 @@
 $main_id=$_POST['main_id'];
 
 if(isset($_POST['id'])){
-  foreach ($_POST['id'] as $key => $id) {
-    if(isset($_POST['del']) && in_array($id,$_POST['del'])) {
-       $Menu->del($id);      
-    }else{
-       $row=$Menu->find($id);
-       $row['text']= $_POST['text'][$key];
-       $row['href']= $_POST['href'][$key];
-       $Menu->save($row);        
+    foreach($_POST['id'] as $key => $id){
+        if(isset($_POST['del']) && in_array($id,$_POST['del'])){
+            $Menu->del($id);
+        }else{
+            $row=$Menu->find($id);
+            $row['text']=$_POST['text'][$key];
+            $row['href']=$_POST['href'][$key];
+            $Menu->save($row);
+        }
     }
-  } 
-
 }
+
 
 if(isset($_POST['text2'])){
     foreach($_POST['text2'] as $key =>$text){
@@ -30,3 +30,4 @@ if(isset($_POST['text2'])){
 to("../backend.php?do=menu");
 
 ?>
+

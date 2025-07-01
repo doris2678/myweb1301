@@ -66,7 +66,6 @@ function count(...$arg){
     return $this->pdo->query($sql)->fetchColumn();
 }
 
-
 function find($id){
     $sql="select * from $this->table ";
     

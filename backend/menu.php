@@ -23,7 +23,8 @@
                         <input type="text" name="href[]" value="<?=$row['href'];?>" style="width:90%">
                     </td>
                     <td>
-                        <?=count($Menu->all(['main_id'=>$row['id']]));?>
+                        <?=count($Menu->all(['main_id' => $row['id']]));?>
+
                     </td>
                     <td>
                         <input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>

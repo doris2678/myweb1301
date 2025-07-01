@@ -17,8 +17,11 @@
     </div>
 </div>
 
-	<div id="main">    	
-		<a title="<?=$Title->find(['sh'=>1])['text']?>" href="index.php"><div class="ti" style="background:url('images/<?=$Title->find(['sh'=>1])['img']?>'); background-size:cover;"></div><!--標題--></a>
+	<div id="main">
+    	    	<a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
+			<div class="ti" style="background:url(&#39;images/<?=$Title->find(['sh'=>1])['img'];?>&#39;); background-size:cover;"></div>
+			<!--標題-->
+		</a>
         	<div id="ms">
              	<div id="lf" style="float:left;">
             		<div id="menuput" class="dbor">
@@ -63,8 +66,7 @@
 							                            
 							                    </div>
                     <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
-                    	<span class="t">進站總人數 : <?=$Total->find(1)['total'];?>
-                        	                        </span>
+                    	<span class="t">進站總人數 : <?=$Total->find(1)['total'];?></span>
                     </div>
         		</div>
                 <div class="di" style="height:540px; border:#999 1px solid; width:76.5%; margin:2px 0px 0px 0px; float:left; position:relative; left:20px;">
